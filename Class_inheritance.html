@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(){
+                this.a=50;
+                this.b=80;
+                this.c=60;
+                this.d=40;
+                this.e=30;
+            }
+            
+            sum(){
+                return (this.a+this.b+this.c+this.d+this.e);
+            }
+
+            display(){
+                console.log("Marks in first subject : "+this.a);
+                console.log("Marks in second subject : "+this.b);
+                console.log("Marks in third subject : "+this.c);
+                console.log("Marks in fourth subject : "+this.d);
+                console.log("Marks in fifth subject : "+this.e);
+            }
+
+        }
+
+        class Student extends Person{
+            average(){
+                var avg=(super.sum())/5;
+                console.log("Average of all 5 subjects : "+avg);
+            }
+        }
+
+        obj=new Student;
+        obj.average();
+    </script>
+</body>
+</html>
